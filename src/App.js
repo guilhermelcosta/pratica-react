@@ -1,15 +1,24 @@
 import './App.css';
-import Pessoa from './components/Pessoa';
-import Evento from './components/Evento';
-import Formulario from './components/Formulario';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Home from './pages/Home';
+import Empresa from './pages/Empresa';
+import Contato from './pages/Contato';
+import NavBar from './components/layout/NavBar';
+import Footer from './components/layout/Footer';
 
 function App() {
     return (
-        <div className="App">
-            <Pessoa nome="Guilherme" anoNascimento={1900} profissao="Eng. Software"/>
-            <Evento nome="Guilherme 2"></Evento>
-            <Formulario/>
-        </div>
+        <BrowserRouter>
+            <NavBar/>
+
+            <Routes>
+                <Route exact path="/" element={<Home/>}></Route>
+                <Route path="/empresa" element={<Empresa/>}></Route>
+                <Route path="/contato" element={<Contato/>}></Route>
+            </Routes>
+
+            <Footer/>
+        </BrowserRouter>
     );
 }
 
