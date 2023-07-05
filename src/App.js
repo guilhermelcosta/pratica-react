@@ -1,25 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import Pessoa from './components/Pessoa';
+import Evento from './components/Evento';
+import Formulario from './components/Formulario';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Pessoa nome="Guilherme" anoNascimento={1900} profissao="Eng. Software"/>
+            <Evento nome="Guilherme 2"></Evento>
+            <Formulario/>
+        </div>
+    );
 }
 
 export default App;
